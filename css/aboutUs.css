@@ -1,0 +1,270 @@
+* {
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-family: "Pangolin", cursive;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #fff;
+    --main-color: #c9a788;
+    --text-color: ;
+    --2nd-color: #434343;
+    --other-color: #666666;
+    --big-font: 5rem;
+    --h2-font: 2.3rem;
+    --p-font: 1.3rem;
+}
+
+border{
+	color: var(--text-color);
+	background: var(--bg-color);
+}
+
+header img {
+    max-width: 80px;
+    height: auto;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #FAD6A5; 
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 10%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px 14%;
+    transition: all .50s ease;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 22px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.h-icons {
+    display: flex;
+    align-items: center;
+}
+
+.h-icons i {
+    font-size: 25px;
+    color: black;
+    margin-left: 5px;
+    margin-right: 20px;
+    transition: all .50s ease;
+} 
+
+.h-icons i:hover {
+    transform: translateY(-4px);
+    color: gray;
+}
+
+#menu-icon {
+    height: 30px;
+    width: 30px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+/* Sections */
+.container {
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+}
+
+section { 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-type: start;
+}
+
+/* Page Specific Styles */
+.Page1, .Page3 {
+    background-color: #fffff0;
+}
+
+.Page2, .Page4 {
+    background-color: #FAD6A5;
+}
+
+.Page5 {
+    background-color: #fffff0;
+}
+
+.Page1 img, .Page2 img, .Page3 img {
+    height: 400px;
+    width: 400px;
+    margin-right: 15px; 
+    float: left;
+    border-radius: 10px;
+    border: 3px solid #000036;
+}
+
+.Page1 .content, .Page2 .content, .Page3 .content, .Page4 .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    max-width: 600px;
+}
+
+.text h1 {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.5; 
+}
+
+.text p {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.Page2 .text h1 {
+    line-height: 3;
+    font-size: 3rem;
+}
+
+.Page2 .text p {
+    font-size: 20px;
+    line-height: 3; 
+}
+
+.Page4 .content {
+    text-align: center;
+}
+
+.Page4 h1, .Page4 .text p, .Page5 h1, .Page5 .text p {
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    header {
+        padding: 10px 3%;
+    }
+    section {
+        padding: 40px 3% 50px;
+    }
+}
+
+@media (max-width: 920px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: -800px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: white;
+        transition: all .50s ease;
+    }
+    .navbar a {
+        display: block;
+        padding: 5px;
+        margin: 15px;
+        font-size: 20px;
+        font-weight: 600;
+        transition: all .50s ease;
+    }
+    .navbar a:hover {
+        color: darkblue;
+    }
+    .navbar.active {
+        top: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --big-font: 3.8rem;
+        --h2-font: 2rem;
+        --p-font: 1.1rem;
+    }
+    .home-text h1 {
+        line-height: 1.1;
+    }
+    .home {
+        height: 85vh;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 5%;
+    }
+    .navbar {
+        top: -600px;
+        padding-top: 80px;
+    }
+    .navbar a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 3%;
+    }
+    .navbar {
+        top: -500px;
+    }
+    .navbar a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        padding: 10px 2%;
+    }
+    .navbar {
+        top: -400px;
+    }
+    .navbar a {
+        font-size: 14px;
+    }
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}

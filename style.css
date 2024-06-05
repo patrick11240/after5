@@ -1,0 +1,347 @@
+* {
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-family: "Pangolin", cursive;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #fff;
+    --main-color: #c9a788;
+    --text-color: ;
+    --2nd-color: #434343;
+    --other-color: #666666;
+    --big-font: 5rem;
+    --h2-font: 2.3rem;
+    --p-font: 1.3rem;
+}
+
+border{
+	color: var(--text-color);
+	background: var(--bg-color);
+}
+
+header img {
+    max-width: 80px;
+    height: auto;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #FAD6A5; 
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 10%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px 14%;
+    transition: all .50s ease;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 22px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.h-icons {
+    display: flex;
+    align-items: center;
+}
+
+.h-icons i {
+    font-size: 25px;
+    color: black;
+    margin-left: 5px;
+    margin-right: 20px;
+    transition: all .50s ease;
+} 
+
+.h-icons i:hover {
+    transform: translateY(-4px);
+    color: gray;
+}
+
+#menu-icon {
+    height: 30px;
+    width: 30px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+p b {
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: 'Figtree'
+}
+
+.Menu p a {
+    color: #5c5b5b;
+    font-family: 'Gilroy-Bold';
+    font-size: 18px;
+    line-height: 104%
+}
+
+.Menu p{
+    line-height: 1px;
+    margin-bottom: 0.1em;
+}
+
+.Menu {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding-top: 10px;
+    margin-top: 120px;
+    margin-left: 20px;
+    padding-left: 20px;
+    background: #efdfbb;
+    min-height: fit-content;
+    word-wrap: break-word;
+    max-width: 200px; /* Adjust the value as needed */  
+}
+
+.up {
+    text-align: center;
+    margin-top: 20px; /* Add some margin to separate "Menu" and "up" */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    text-align: center;
+}
+
+.navbar-container nav {
+    display: inline-block;
+    text-align: left; /* Ensure menu text is aligned to the left */
+}
+
+#Product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+}
+#productSelect{
+    text-transform: none;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: .5rem;
+    background-color: var(--white);
+    margin: 1rem 0;
+    width: 73%;
+}
+#categorySelect{
+    text-transform: none;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: .5rem;
+    background-color: var(--white);
+    margin: 1rem 0;
+    width: 26%;
+}
+
+#Product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: 0.2 ease;
+
+}
+
+#Product h2{
+    margin: 10px;
+    padding-top: 20px;
+}
+
+#Product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#Product1 .pro {
+    text-align: center;
+}
+#Product1 .pro .des .span{
+    color: black;
+    font-size: 12px;
+    
+}
+#Product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+#Product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 7000;
+    color: #010101;
+}
+
+#Product1 .order-btn{
+    padding: 10px 60px;
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 30px;
+}
+
+.popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;   
+    visibility: hidden; 
+    transition: transform 0.4s, top 0.4s;
+    border: 1px solid;
+    position: absolute;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50%;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd549;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.02);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: 999; /* Ensure it's above the popup */
+    display: none; /* Initially hidden */
+}
+
+.overlay.show {
+    display: block; /* Show the overlay when the popup is opened */
+}
+.pro-container {
+    margin-top: 30px;
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding: 10px 3%;
+    }
+    section {
+        padding: 40px 3% 50px;
+    }
+}
+
+@media (max-width: 920px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: -800px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: white;
+        transition: all .50s ease;
+    }
+    .navbar a {
+        display: block;
+        padding: 5px;
+        margin: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        transition: all .50s ease;
+    }
+    .navbar a:hover {
+        color: darkblue;
+    }
+    .navbar.active {
+        top: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --big-font: 3.8rem;
+        --h2-font: 2rem;
+        --p-font: 1.1rem;
+    }
+    .home-text h1 {
+        line-height: 1.1;
+    }
+    .home {
+        height: 85vh;
+    }
+    .navbar a {
+        font-size: 16px;
+    }
+}
